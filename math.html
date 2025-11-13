@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript String and Math Functions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef7ff;
+      color: #333;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #00509e;
+    }
+    h2 {
+      color: #007944;
+      border-bottom: 2px solid #007944;
+      padding-bottom: 5px;
+    }
+    pre {
+      background-color: #f8f8f8;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .output {
+      background-color: #fffde7;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Predefined Functions in String and Math Objects</h1>
+
+  <h2>1. String Object Functions</h2>
+  <p>
+    JavaScript’s <code>String</code> object provides several predefined functions to manipulate and analyze text.
+  </p>
+
+  <pre><code>
+
+  <div class="output" id="stringOutput"></div>
+
+  <h2>2. Math Object Functions</h2>
+  <p>
+    The <code>Math</code> object provides mathematical constants and functions. You can perform operations such as rounding, finding roots, powers, and generating random numbers.
+  </p>
+
+  <pre><code>
+
+
+  <div class="output" id="mathOutput"></div>
+
+  <script>
+    // String Object Demonstration
+    let text = "  Hello JavaScript World!  ";
+
+    let stringResult = `
+    Original Text: "${text}"
+    Length: ${text.length}
+    Uppercase: ${text.toUpperCase()}
+    Lowercase: ${text.toLowerCase()}
+    Trimmed: "${text.trim()}"
+    Substring (2,8): "${text.substring(2,8)}"
+    Replace "JavaScript" with "HTML": "${text.replace("JavaScript", "HTML")}"
+    Index of "World": ${text.indexOf("World")}
+    `;
+
+    document.getElementById("stringOutput").innerText = stringResult;
+
+    // Math Object Demonstration
+    let num = 7.56;
+
+    let mathResult = `
+    Number: ${num}
+    Math.round(): ${Math.round(num)}
+    Math.floor(): ${Math.floor(num)}
+    Math.ceil(): ${Math.ceil(num)}
+    Math.pow(2,4): ${Math.pow(2,4)}
+    Math.sqrt(49): ${Math.sqrt(49)}
+    Math.random(): ${Math.random().toFixed(4)}
+    Math.max(10,25,40): ${Math.max(10,25,40)}
+    Math.min(10,25,40): ${Math.min(10,25,40)}
+    `;
+
+    document.getElementById("mathOutput").innerText = mathResult;
+  </script>
+
+</body>
+</html>

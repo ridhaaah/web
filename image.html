@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mouseover Image & Text Change</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #container {
+        display: inline-block;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #f2f2f2;
+        width: 300px;
+    }
+
+    #imgBox {
+        width: 250px;
+        height: 180px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    #description {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>Mouseover Image & Text Change</h1>
+
+<div id="container">
+    <img id="imgBox" src="C:\Users\CCF 23\Desktop\WEB" alt="Image">
+    <div id="description">Hover over this area to change image and text</div>
+</div>
+
+<script>
+    const container = document.getElementById("container");
+    const imgBox = document.getElementById("imgBox");
+    const desc = document.getElementById("description");
+
+    // Mouse over event
+    container.addEventListener("mouseover", function() {
+        imgBox.src = "https://via.placeholder.com/250x180/ff5555/ffffff?text=New+Image";
+        desc.textContent = "Mouse is over the content!";
+    });
+
+    // Mouse out event
+    container.addEventListener("mouseout", function() {
+        imgBox.src = "https://via.placeholder.com/250x180?text=Original+Image";
+        desc.textContent = "Hover over this area to change image and text";
+    });
+</script>
+
+</body>
+</html>
